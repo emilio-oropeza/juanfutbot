@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimal-ui">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,700,900' rel='stylesheet' type='text/css'>
+		<link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet" type="text/css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.waypoints.js"></script>
+		<title>Juanfutbot</title>
+		<style>
+			html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+				background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+				border: 0 none;
+				font-size: 100%;
+				margin: 0;
+				outline: 0 none;
+				padding: 0;
+				vertical-align: baseline;
+			}
+		</style>
+		<script type="text/javascript">
+			urlIndepth = "";
+		</script>
+		<script type="text/javascript">
+			if(typeof(sharePopUp) != "function"){
+				function sharePopUp(social, url) {
+					var height = 0;
+					var width = 0;
+					var sn = "";
+					if(social == "fb"){ 
+						height = 370;
+						width = 580;
+					}else if(social == "tw"){
+						height = 220;
+						width = 580;
+					}else if(social == "pin"){
+						height = 480;
+						width = 420;
+					}
+					//clickstats(, , , social);
+					/*if(shareWindow != undefined && shareWindow.closed == false){
+						shareWindow.close();
+					}*/
+					shareWindow = window.open(url, "shareUrl", "status=0,height="+height+",width="+width+",resizable=0,menubar=0");
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,600,800,700' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<div id="indepth-body">
+			<header class="navbar-fixed-top">
+				<nav class="navbar navbar-tel">
+				  	<div class="container">
+				    	<div class="navbar-header">
+				    		<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu_movil" aria-expanded="false">
+					        	<span class="icon-bar"></span>
+					        	<span class="icon-bar"></span>
+					        	<span class="icon-bar"></span>
+					      	</button>
+				     		<a class="navbar-brand" href="#">
+				     			<img src="images/general/logo_menu.png">
+				     		</a>
+				    	</div>
+				    	<div id="menu_movil" class="collapse navbar-collapse">
+				      		<ul class="nav navbar-nav">
+				        		<li class="menu-tel"><a href="#bot">Bot</a></li>
+								<li class="menu-tel"><a href="#equipos">Equipos</a></li>
+								<li class="menu-tel"><a href="#partidos">Partidos</a></li>
+								<li class="menu-tel"><a href="#gaming">Gaming</a></li>
+				      		</ul>
+			    		</div>
+				  	</div>
+				</nav>
+				<div id="navbar-status">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-4">
+								<div class="row">
+									<div class="col-xs-2" id="navbar-status-img">
+										<img class="img-center" src="images/general/flecha_atras.png">
+									</div>
+									<div class="col-xs-6">
+										<div  id="navbar-status-user">juanfutbol</div>
+										<div id="navbar-status-stat">escribiendo..</div>
+									</div>
+								</div>
+							</div>
+						</div>						
+					</div>
+				</div>
+			</header>
+			<div id="body_container">
+				<section id="portada">
+					<div class="container">
+						<div id="portada-logo">
+							<img class="img-responsive img-center" src="images/portada/logo_juanfutbot.png">
+							<p class="text-center">Documentación de Usuario</p>
+							<a href="#bot">
+								<img class="img-responsive img-center" src="images/portada/flecha_abajo.png">
+							</a>
+						</div>
+					</div>
+				</section>
+				<div id="bot"></div>
+				<section id="chat">
+					<div class="container">
+						<div class="row">
+							<div class="col-xs-2 col-xs-offset-5">
+								<div class="row">
+									<div class="col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 box-chat chat-text-white chat-back-cat">Bot</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-9 col-sm-6">
+								<div class="chat-text-black chat-back-usr box-chat">
+									¿Qué es el bot? ¿Ya te volviste un terminator juan?
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-9 col-xs-offset-3 col-md-7 col-md-offset-5">
+								<div class="chat-text-black chat-back-juan box-chat">
+									No, es una herramienta que te permitirá tener información, juegos y noticias de tu equipo favorito desde la comodidad de la app de Telegram... aunque estaría chido ponerse mamey como Schwarzenegger.
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-9 col-xs-offset-3 col-md-7 col-md-offset-5 img-juan">
+								<img class="img-responsive" src="images/chat/gif_1.gif">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-9 col-sm-3">
+								<div class="chat-text-black chat-back-usr box-chat">
+									¿Y cómo funciona?
+								</div>							
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-9 col-xs-offset-3 col-md-7 col-md-offset-5">
+								<div class="chat-text-black chat-back-juan box-chat">
+									En base a comandos sencillos. Por ejemplo, al escribir "<span class="chat-text-blue">/start</span>" en Telegram, mi servicio bot iniciará con un mensaje de bienvenida, para que te sientas todo un mirrey. 
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-9 col-xs-offset-3 col-md-7 col-md-offset-5 img-juan">
+								<img class="img-responsive" src="images/chat/sticker_1.png">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-9">
+								<div class="chat-text-black chat-back-usr box-chat">
+									Chido juan <img src="images/chat/emoji_1.png">, ¿pero y luego qué?
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-9 col-xs-offset-3 col-md-7 col-md-offset-5">
+								<div class="chat-text-black chat-back-juan box-chat">
+									Usando el comando "<span class="chat-text-blue">/info</span>", mi bot te dirá todo lo que puedes hacer. Desde suscribirte al canal de tu equipo favorito y cómo hacerlo, hasta poder tener una alegre charla de comadres con él.
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-9">
+								<div id="equipos" class="chat-text-black chat-back-usr box-chat">
+									Me late todo esto pero, ¿hay riesgo de que nos conquisten las máquinas?
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-9 col-xs-offset-3 col-md-7 col-md-offset-5">
+								<div class="chat-text-black chat-back-juan box-chat">
+									Por el momento, no. Pero la verdad, juanitolover, no te prometo nada en un futuro
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-4 col-xs-offset-4">
+								<div class="row">
+									<div class="col-xs-12 col-xs-offset-0 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 box-chat chat-text-white chat-back-cat">Equipos</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-9">
+								<div class="chat-text-black chat-back-usr box-chat">
+									Cuéntame juanito, ¿de cuáles equipos trae información tu bot?
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-9 col-xs-offset-3 col-md-7 col-md-offset-5">
+								<div class="chat-text-black chat-back-juan box-chat">
+									Por el momento me enfocaré en el negocio local, los de la MX, pues. Checa mi lista:
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-9 col-xs-offset-3 col-md-7 col-md-offset-5 img-juan">
+								<img class="img-responsive" src="images/chat/liga_mx.png">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-9">
+								<div class="chat-text-black chat-back-usr box-chat">
+									¿Cómo me suscribo a uno de ellos? No me digas que cobras la millonada
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-9 img-usr">
+								<img class="img-responsive" src="images/chat/gif_2.gif">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-9 col-xs-offset-3 col-md-7 col-md-offset-5">
+								<div class="chat-text-black chat-back-juan box-chat">
+									Naaah, es totalmente gratis. Sólo necesitas la app Telegram y aprenderte unos comandos sencillos. "<span class="chat-text-blue">+NombreDelEquipo</span>" te suscribe al canal y "<span class="chat-text-blue">-NombreDelEquipo</span>" te desinscribe (te 'insuscribe, carnal' por si le vas al América)
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-9">
+								<div class="chat-text-black chat-back-usr box-chat">
+									¿Y si le voy al Carnes Supremas FC y no está en la lista?
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-9 col-xs-offset-3 col-md-7 col-md-offset-5">
+								<div class="chat-text-black chat-back-juan box-chat">
+									Tú tranqui. Permanentemente estaré actualizando mi información, así que ten por seguro que tu equipo estará tarde o temprano. (Por lo menos antes de que se retire el Conejo) 
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div id="partidos" class="col-xs-9 col-xs-offset-3 col-md-7 col-md-offset-5 img-juan">
+								<img class="img-responsive" src="images/chat/sticker_2.png">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-4 col-xs-offset-4">
+								<div class="row">
+									<div class="col-xs-12 col-xs-offset-0 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 box-chat chat-text-white chat-back-cat">Partidos</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-9">
+								<div class="chat-text-black chat-back-usr box-chat">
+									¿Partidos? ¿Y eso para qué es?
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-9 col-xs-offset-3 col-md-7 col-md-offset-5">
+								<div class="chat-text-black chat-back-juan box-chat">
+									¡No te espantes! Esto es lo mejor de mi bot. Con esta herramienta tendrás información de partidos pasados, próximos y en vivo de tu equipo. <img src="images/chat/emoji_2.png">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-9 img-usr">
+								<img class="img-responsive" src="images/chat/gif_3.gif">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-9">
+								<div class="chat-text-black chat-back-usr box-chat">
+									¡¿Neta?! Wow, ¿y cómo le pido a tu bot que me diga eso?
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-9 col-xs-offset-3 col-md-7 col-md-offset-5">
+								<div class="chat-text-black chat-back-juan box-chat">
+									Un sencillo comando: "<span class="chat-text-blue">/horario NombreDelEquipo</span>". Por ejemplo, si te gusta sufrir y le vas a Cruz Azul, sólo necesitas decirle a mi bot "<span class="chat-text-blue">/horario Cruz Azul</span>" y él te dirá cuándo juega, cuándo jugó o si está jugando en ese momento.
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-9">
+								<div class="chat-text-black chat-back-usr box-chat">
+									Pero, ¿y si tengo memoria de teflón y se me olvidan los comandos?
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-9 col-xs-offset-3 col-md-7 col-md-offset-5">
+								<div class="chat-text-black chat-back-juan box-chat">
+									Relax, campeón. Para eso es esta guía de usuario. Neta que seguirla es tan fácil que hasta tu mascota podrá usar mi bot.
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div id="gaming" class="col-xs-9 col-xs-offset-3 col-md-7 col-md-offset-5 img-juan">
+								<img class="img-responsive" src="images/chat/gif_4.gif">
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-4 col-xs-offset-4">
+								<div class="row">
+									<div class="col-xs-12 col-xs-offset-0 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 box-chat chat-text-white chat-back-cat">Gaming</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-9">
+								<div class="chat-text-black chat-back-usr box-chat">
+									¿Gaming? Sííí, dime que vas a tener jueguitos <img src="images/chat/emoji_3.png">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-9 col-xs-offset-3 col-md-7 col-md-offset-5">
+								<div class="chat-text-black chat-back-juan box-chat">
+									Pero claro que sí campeón. Ahí tendrás que demostrar si como roncas, duermes.
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-9">
+								<div class="chat-text-black chat-back-usr box-chat">
+									¿Y de qué son? ¿Puedo probar uno? ¿Puedo, puedo? <img src="images/chat/emoji_4.png">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-9 col-xs-offset-3 col-md-7 col-md-offset-5 ">
+								<div class="chat-text-black chat-back-juan box-chat">
+									Claro que sí. Subiré quizzes, encuestas e imágenes para resolver. Te sentirás como cuando ibas a casa de tus cuates a jugar PS One. Te dejo un ejemplo:
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-9 col-xs-offset-3 col-md-7 col-md-offset-5 box-juan">
+								<div class="chat-text-black chat-back-juan box-chat">
+									<img class="img-responsive img-center" src="images/chat/img_1.png">
+									En el homenaje a Cruyff qué número tenía la camiseta del Ajax
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-9">
+								<div class="chat-text-black chat-back-usr box-chat">
+									Ésa es muy fácil, pero ¿cómo le contesto al bot? <img src="images/chat/emoji_5.png">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-9 col-xs-offset-3 col-md-7 col-md-offset-5">
+								<div class="chat-text-black chat-back-juan box-chat">
+									Fácil, Telegram te despliega el teclado con las respuestas posibles
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-9 col-xs-offset-3 col-md-7 col-md-offset-5">
+								<div class="chat-text-black chat-back-juan box-chat">Inténtalo</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-9">
+								<div class="chat-text-black chat-back-usr box-chat">A ver, ahí voy</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-9">
+								<div class="chat-text-black chat-back-usr box-chat">14</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-9 col-xs-offset-3 col-md-7 col-md-offset-5">
+								<div class="chat-text-black chat-back-juan box-chat">
+									<img class="img-responsive img-center" src="images/chat/img_2.png">
+									Wow, eres más crack para esto que Cristiano Ronaldo para modelar en calzones.
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-9">
+								<div class="chat-text-black chat-back-usr box-chat">
+									Ya me emocionaste, juanito. ¡Ya quiero usar tu bot!
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-9 col-xs-offset-3 col-md-7 col-md-offset-5">
+								<div class="chat-text-black chat-back-juan box-chat">
+									¡Adelante! Úsalo, nadie te detiene. Mi trabajo es entretenerte como el álbum de estampitas del mundial. Diviértete y que el gusto te duro mucho más que a Messi su paraíso fiscal.
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-xs-9 col-xs-offset-3 col-md-7 col-md-offset-5 img-juan">
+								<img class="img-responsive" src="images/chat/sticker_3.png">
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+			<footer class="navbar-fixed-bottom">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-2 col-sm-1">
+							<img class="img-responsive" src="images/general/icono_1.jpg">
+						</div>
+						<div class="col-xs-4 col-xs-offset-6 col-sm-2 col-sm-offset-9">
+							<img class="img-responsive" src="images/general/icono_2.jpg">
+						</div>
+					</div>
+				</div>
+			</footer>
+		</div>		
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
+	</body>
+</html>
