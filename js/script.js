@@ -14,7 +14,7 @@ $(document).ready(function(){
                 $(this).removeClass("typing");
             }
             if($(this).hasClass("last")){
-                $("#navbar-status-stat").text("");
+                $("#navbar-status-stat").css({"visibility":"hidden"});
             }
         },
         offset: function() {
