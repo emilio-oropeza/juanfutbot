@@ -1,11 +1,15 @@
 #indepth-body{
-	height: 100vh;
-	padding-top: 100px;
+	padding-top: 110px;
 	padding-bottom: 50px;
 	position: relative;
 	font-family: 'Open Sans', sans-serif;
 }
 /* ----- header ----- */
+header{
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
 .navbar-tel {
     background-color: #628aa9;
     border-color: #628aa9;
@@ -34,6 +38,9 @@
 .navbar-tel .navbar-nav > li > a {
     color: #deeaf4;
 }
+.navbar-tel .navbar-nav{
+	padding: 0px;
+}
 .navbar-tel .navbar-brand{
 	padding-top: 12px;
 }
@@ -42,6 +49,10 @@
 }
 #navbar-status {
     background-color: #ffffff;
+    height: 60px;
+}
+#navbar-status > .container{
+	padding-top: 10px;
 }
 #navbar-status > .container > .row{
 	padding-top: 4px;
@@ -63,17 +74,16 @@
 
 /* ----- sections ----- */
 #body_container{
-	background-image: url("../images/general/fondo.jpg");
+	background-image: url("../images/general/fondo1.jpg");
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
+	width: 100%;
+	overflow-y: auto;
 }
 #portada{
-	/*background-image: url("../images/general/fondo.jpg");
-	background-size: cover;
-	background-position: center;*/
 	position: relative;
-	/*background-attachment: fixed;*/
+	height: 100%;
 }
 	#portada-logo{
 		width: 262px;
@@ -123,16 +133,33 @@
 	.chat-back-usr{
 		background-color: #ffffff;
 		float: left;
-		text-align: left;
 	}
 	.chat-back-juan{
 		background-color: #eefddd;
 		float: right;
-		text-align: right; 
 	}
 	.chat-back-cat{
 		background-color: #136b71;
 		text-align: center;
+	}
+	.gif-chat{
+		-ms-border-radius: 3px;
+		-moz-border-radius: 3px;
+		-webkit-border-radius: 3px;
+		border-radius: 3px;
+	}
+	.img-game{
+		width: 100%;
+	}
+	.div-game {
+	    padding-left: 0px !important;
+	    padding-right: 0px !important;
+	    padding-top: 0px !important;
+	}
+	.p-game{
+		padding-left: 15px;
+	    padding-right: 15px;
+	    padding-top: 5px;
 	}
 	.box-chat{
 		display: inline-block;
@@ -144,6 +171,7 @@
 		box-shadow: 0px 2px 0px rgba(0,0,0,0.1);
 		width: auto;
 		max-width: 100%;
+		opacity: 0.8;
 	}
 	.img-usr > img{
 		float: left;
@@ -156,6 +184,9 @@
 /* ----- footer ----- */
 footer{
 	background-color: #ffffff;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
 }
 footer > .container > .row {
     padding-top: 10px;

@@ -1,7 +1,10 @@
 $(document).ready(function(){
-    $("#portada").height(getHeithCover());
-    $(window).resize(function(){$("#portada").height(getHeithCover());});
-    var body = $("html, body");
+	$("#indepth-body").height(getHeightIndepthBody());
+    $("#body_container").height(getHeithCover());
+    $(window).resize(function(){
+    	$("#indepth-body").height(getHeightIndepthBody());
+    	$("#body_container").height(getHeithCover());
+    });
     $('a').click(animateScroll);
 
     $('.typing').css('opacity', 0);
@@ -23,22 +26,32 @@ $(document).ready(function(){
             }else{
                 return $( window ).height() - $(this).height() - 100
             }
-        }
+        },
+        context: document.getElementById('body_container')
     });
-
+    barsDisapear();
 });
 
+function barsDisapear(){
+	$("#nav-bar-stats").remove();
+	$("#mobile-horizontal-menu").remove();
+	$("#top-bar-wrapper").remove();
+	$("#mobilemenu").remove();
+}
 
 function getHeithCover(){
-    var height = $(window).height();
-    height = height - 150;
+    var height = $("#indepth-body").height();
     return height;
+}
+function getHeightIndepthBody(){
+	var height = $(window).height() - 160;
+	return height;
 }
 
 function animateScroll(){
     $('html, body').animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top
-    }, 1500);
+        scrollTop: $($(this).attr('href')).get(0).scrollIntoView()
+    }, 1500);	
     return false;
 }
 
