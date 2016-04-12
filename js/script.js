@@ -8,7 +8,7 @@ $(document).ready(function(){
 
     $('.typing').waypoint({
         handler:function(direction) {
-            $(this).animate({ opacity: 1 }, 0);
+            $(this).animate({ opacity: 1 }, 1000);
             if($(this).hasClass("typing")) {
                 $("#navbar-status-stat").text("...escribiendo");
                 $(this).removeClass("typing");
