@@ -10,7 +10,7 @@ $(document).ready(function(){
         handler:function(direction) {
             $(this).animate({ opacity: 1 }, 0);
             if($(this).hasClass("typing")) {
-                $("#navbar-status-stat").text("escribiendo...");
+                $("#navbar-status-stat").text("...escribiendo");
                 $(this).removeClass("typing");
             }
             if($(this).hasClass("last")){
